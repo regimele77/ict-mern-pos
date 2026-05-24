@@ -1,3 +1,5 @@
+import CustomButton from "./CustomButton"
+
 const plans = [
   {
     name: "Silver", emoji: "🥈", price: 43,
@@ -34,19 +36,16 @@ const plans = [
 export default function Pricing() {
   return (
     <section className="py-16 px-6 bg-gray-50 min-h-screen">
-      
-      {/* Header */}
+
       <div className="text-center mb-12">
-        <p className="text-blue-500 font-medium mb-2">Pricing Plan</p>
+        <p className="text-green-400 font-medium mb-2">Pricing Plan</p>
         <h1 className="text-3xl font-bold text-gray-900">The best choice for you</h1>
       </div>
 
-      {/* Cards */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
         {plans.map((plan) => (
           <div key={plan.name} className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 flex flex-col gap-4">
-            
-            {/* Plan name */}
+
             <div className="flex items-center gap-3">
               <div className="w-12 h-12 rounded-full bg-gray-100 flex items-center justify-center text-2xl">
                 {plan.emoji}
@@ -54,7 +53,6 @@ export default function Pricing() {
               <span className="text-lg font-bold text-gray-800">{plan.name}</span>
             </div>
 
-            {/* Price */}
             <div>
               <div className="flex items-baseline gap-1">
                 <span className="text-4xl font-extrabold text-blue-500">${plan.price}</span>
@@ -65,23 +63,18 @@ export default function Pricing() {
 
             <hr className="border-gray-100" />
 
-            {/* Features */}
             <ul className="flex flex-col gap-3 flex-1">
               {plan.features.map((f) => (
                 <li key={f.label} className={`flex items-center gap-3 text-sm ${f.active ? "text-gray-800" : "text-gray-400"}`}>
                   <span className={`w-5 h-5 rounded-full flex items-center justify-center text-xs ${f.active ? "bg-green-100 text-green-700" : "bg-gray-100 text-gray-400"}`}>
-                    {f.active ? "✓" : "–"}
+                    {f.active ? "✓" : "-"}
                   </span>
                   {f.label}
                 </li>
               ))}
             </ul>
 
-            {/* Button */}
-            <button className="w-2/4 bg-blue-500 hover:bg-blue-600 text-white font-semibold py-3 rounded-lg transition">
-              Buy Now
-            </button>
-
+            <CustomButton title='Buy now'/>
           </div>
         ))}
       </div>
