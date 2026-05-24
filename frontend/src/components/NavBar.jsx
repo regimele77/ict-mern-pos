@@ -13,6 +13,7 @@ const NavBar = () => {
         <ul className="nav-links flex gap-8 items-center text-2xl">
             <li><a href="#about">About</a></li>
             <li><a href="#features">Features</a></li>
+            <li><a href="#pricing">Pricing</a></li>
             <li>
               <CustomButton title='Login'/>
             </li>

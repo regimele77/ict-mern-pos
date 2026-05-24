@@ -3,6 +3,7 @@ import NavBar from './components/NavBar'
 import HeroSection from './components/HeroSection'
 import AboutSection from './components/Aboutsection'
 import PosFeatures from './components/PosFeatures'
+import Pricing from './components/Pricing'
 
 function App() {
   return (
@@ -14,6 +15,9 @@ function App() {
       </div>
       <div id='features'>
         <PosFeatures/>
+      </div>
+      <div id='pricing'>
+        <Pricing/>
       </div>
       <Footer/>
     </>
