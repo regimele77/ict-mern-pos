@@ -16,7 +16,7 @@ const HeroSection = () => {
           </p>
           
           <div>
-            <CustomButton />
+            <CustomButton title='Start Free Trial'/>
           </div>
         </div>
 
