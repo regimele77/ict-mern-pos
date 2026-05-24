@@ -1,15 +1,21 @@
 import React from 'react'
+import CustomButton from './CustomButton'
 
 const NavBar = () => {
   return (
-    <nav style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '1rem'}}>
+    <nav className='flex justify-between items-center p-4 font-bold'>
         <div>
-            <h1>LOGO</h1>
+            <img
+              src="https://www.zohowebstatic.com/sites/oweb/images/ogimage/pos-logo.png"
+              width='100'
+            />
         </div>
         <ul className="nav-links flex gap-8 items-center">
             <li><a href="#features">Features</a></li>
             <li><a href="#price">Price</a></li>
-            <li><button className='rounded-xl bg-blue-500 px-4 py-2 text-white border-none padding-0.5rem 1rem cursor-pointer'>Login</button></li>
+            <li>
+              <CustomButton/>
+            </li>
         </ul>
     </nav>
    
