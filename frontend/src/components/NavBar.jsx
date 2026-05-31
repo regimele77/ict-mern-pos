@@ -15,12 +15,10 @@ const NavBar = () => {
             <li><a href="#features">Features</a></li>
             <li><a href="#pricing">Pricing</a></li>
             <li>
-              <CustomButton title='Login'/>
+              <CustomButton title='Login' path='login'/>
             </li>
         </ul>
     </nav>
-   
-
   )
 }
 
