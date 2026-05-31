@@ -1,25 +1,17 @@
-import Footer from './components/Footer'
-import NavBar from './components/NavBar'
-import HeroSection from './components/HeroSection'
-import AboutSection from './components/Aboutsection'
-import PosFeatures from './components/PosFeatures'
-import Pricing from './components/Pricing'
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Home from './pages/Home'
+import Login from './pages/Login';
 
 function App() {
   return (
     <>
-      <NavBar/>
-      <HeroSection/>
-      <div id='about'>
-        <AboutSection/>
-      </div>
-      <div id='features'>
-        <PosFeatures/>
-      </div>
-      <div id='pricing'>
-        <Pricing/>
-      </div>
-      <Footer/>
+      <BrowserRouter>
+        <Routes>
+          <Route path='/' element={<Home/>} />
+          <Route path='/home' element={<Home/>} />
+          <Route path='/login' element={<Login/>} />
+        </Routes>
+      </BrowserRouter>
     </>
   )
 }
