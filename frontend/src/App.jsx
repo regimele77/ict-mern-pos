@@ -5,6 +5,7 @@ import AboutSection from './components/Aboutsection'
 import PosFeatures from './components/PosFeatures'
 import Pricing from './components/Pricing'
 
+
 function App() {
   return (
     <>
